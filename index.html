@@ -26,6 +26,42 @@
 		</section>
 		<section class="footer" id="contact">
 			<h2>Contact</h2>
+			<div class="sam_form samsung_form">
+                                <span class="sam_text-blue sam_text-center sam_center-block sam_legal-info">
+                                    Pola oznaczone (*) są obowiązkowe
+                                </span>
+
+                                <form class="js-form-contact" action="send.php" method="post">
+                                    <div class="samsung_input_holder">
+                                        <div class="samsung_label">ADRES EMAIL <span class="sam_text-blue">*</span></div>
+                                        <input id="mail" type="text" placeholder="Wpisz swój adres e-mail" name="email" class="samsung_input_required samsung_input_email samsung_input_identical">
+                                        <div class="samsung_validation mail_fail">
+                                            Prosimy o poprawne wypełnienie tego pola
+                                        </div>
+                                    </div>
+
+                                    <div class="samsung_input_holder">
+                                        <div class="samsung_legal_wrapper">
+                                            <input type="checkbox" name="legal" id="samsung_legal_checkbox" class="samsung_input_required">
+                                            <label for="samsung_legal_checkbox">
+                                                <span class="checkbox_image">
+                                                    <img src="assets-samsung/img/ptaszek.png" alt="">
+                                                </span>
+                                                Wyrażam zgodę na otrzymywanie od Samsung informacji handlowych, w tym ofert i promocji, środkami komunikacji elektronicznej/telefonicznej.
+                                                <br><br>
+                                            </label>
+
+                                        </div>
+                                        <div class="samsung_validation check_fail">
+                                            Prosimy o zaakceptowanie klauzuli
+                                        </div>
+                                    </div>
+
+
+                                    <input style="float: left; margin-right: 25px;" type="submit" value="ZAPISZ SIĘ">
+                                    <p style="padding: 15px;" class="send__result"></p>
+                                </form>
+                            </div>
 		</section>
 	</div>
 	<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
