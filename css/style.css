@@ -4,6 +4,20 @@
 	font-family: 'Roboto', sans-serif;
 }
 
+@font-face {
+  font-family: 'Mistral';
+  src: url('../font/Mistral.ttf')  format('truetype');
+}
+
+h1, h2, .logo {
+    font-family: 'Mistral', Fallback, sans-serif; 
+}
+
+.logo{
+	font-size: 40px;
+	font-weight: bold;
+}
+
 header{
 	background-image: url('../img/clouds.jpg');
 	background-size: cover;
@@ -11,15 +25,31 @@ header{
 	height: 100%;
 }
 
+.start-element{
+	position: absolute;
+	background-image: url('../img/city.jpg');
+	background-size: cover;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	text-align: center;
+}
+
+/*.start-element h1{
+
+}
+*/
 h1{
 	padding-top: 200px;
-	font-size: 100px;
+	font-size: 200px;
 	font-weight: 300;
-	color: #0D2949;
+	color: #8A8AEF;
 }
 
 h2{
 	color: #5495DF;
+	font-size: 50px;
 }
 
 .wrapper{
@@ -165,5 +195,111 @@ h2{
 	transform: rotate(-135deg);
 }
 
+.container{
+	display: flex;
+}
+
+.container div{
+	border: 2px solid #000;
+}
+
+.box, .box-1{
+	position: absolute;
+	bottom: 20px;
+
+}
+.box{
+	left: -700px;
+	transition: all 1.1s ease-out;
+	-webkit-transition: all 1.1s ease-out;
+}
+
+.box-1{
+	right: -700px;
+	transition: all 1.1s ease-out;
+	-webkit-transition: all 1.1s ease-out;
+}
+
+.container img{
+	max-width: 100%;
+}
+
+.fp-viewing-main .box{
+	left: 100px;
+}
+
+.fp-viewing-main .box-1{
+	right: 100px;
+}
+
+.fp-viewing-contact .box{
+	left: 100px;
+}
+
+.fp-viewing-contact .box-1{
+	right: 100px;
+}
+
+.contact{
+	text-align: center;
+}
 
 
+.icon-container{
+	min-height: 300px;
+	max-width: 300px;
+	text-align: center;
+	font-size: 30px;
+}
+
+.icon-container i{
+	font-size: 20px;
+	border-radius: 80px;
+	background-color: #5495DF;
+	height: 40px;
+	width: 40px;
+	color: #fff;
+	line-height: 40px;
+	-webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1); 
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1); 
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
+    transition: all 200ms ease-in;
+    transform: scale(1);   
+}
+
+.icon-container i:hover{
+	-webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.2);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.2);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.2);
+    transition: all 200ms ease-in;
+    transform: scale(1.2);
+}
+
+.download-cv{
+	border: 2px solid #5495DF;
+	border-radius: 25px;
+	color: #5495DF;
+	width: 200px;
+	font-size: 20px;
+}
+
+.download-cv span{
+	display: block;
+}
+
+.download-cv a{
+	display: block;
+	text-decoration: none;
+	color: #5495DF;
+	display: none;
+}
+footer{
+	max-width: 300px;
+	font-weight: bold;
+}
