@@ -16,8 +16,4 @@ $( document ).ready(function() {
 
 	});
 
-	$('.download-cv').hover(function(){
-		$('.download-cv a').slideToggle('slow').stop(true, true);
-	});
-
 });
