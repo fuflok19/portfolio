@@ -23,19 +23,16 @@ header{
 }
 
 .logo{
-	width: 50px;
-	height: 50px;
-	border-radius: 50px;
+	border-radius: 50%;
 	border: 2px solid #333;
 	line-height: 50px;
-}
-
-.logo span{
 	font-weight: bold;
 	font-size: 30px;
 	font-family: 'Rozha One', serif;
 	color: #333;
+	padding: 2px;
 }
+
 .start-element{
 	position: absolute;
 	background-image: url('../img/city.jpg');
@@ -56,13 +53,15 @@ header{
 	font-weight: 300;
 	position: absolute;
 	z-index: 2;
+	left: 20%;
+    margin-left: -100px;
 }
 
 h2{
 	font-size: 60px;
 	top: 350px;
     width: 300px;
-    left: 0;
+    left: 100px;
 }
 
 h3{
@@ -83,9 +82,10 @@ h3{
 .wrapper p{
 	font-size: 20px; 
 	top: 350px;
-    width: 300px;
-    left: 200px;
+    width: 390px;
+    left: 280px;
     line-height: 28px;
+    font-weight: 300;
 }
 
 .box{
@@ -94,7 +94,7 @@ h3{
 	position: absolute;
 	background-color: #346268;
 	top: 200px;
-    left: 237px;
+    left: 335px;
     z-index: 1;
 }
 
@@ -106,7 +106,7 @@ h3{
 	cursor: pointer;
 	text-decoration: none;
 	color: #346268;	
-	left: 500px;
+	right: 140px;
     top: 630px;
     padding: 20px 40px 20px 40px;
     font-weight: 700;
@@ -378,18 +378,86 @@ h3{
 /* main */
 
 .main{
-	background-color: #346268;
+	background-color: #b5c0ad;
+	text-align: center;
 }
 
-.main h4{
-	color: ;
+.main h3{
+	font-size: 80px;
+    margin-bottom: 100px;
+}
+
+.main img{
+	max-width: 400px;
 }
 
 .container{
+	margin: 0 auto;
+	max-width: 1000px;
 	display: flex;
 }
 
+.box-1{
+	flex: 1;
+	order: 1;
+	text-align: left;
+}
 
+.box-2{
+	flex: 2;
+	order: 2;
+	text-align: right;
+}
+
+.main h4{
+	font-weight: 400;
+}
+
+.box-1 h4{
+	color: #b5c0ad;
+	font-size: 30px;
+	background-color: #346268;
+	padding: 40px 40px;
+}
+
+.box-2 h4{
+	color: #b5c0ad;
+	font-size: 30px;
+	background-color: #346268;
+	padding: 40px 40px;
+}
+
+figure{
+	position: relative;
+	transform: translateX(20px);
+	transition: all 0.3s ease-in-out;
+	overflow: hidden;
+	width: 150px;
+	height: 250px;
+}
+
+figcaption{
+	text-align: left;
+	background-color: #093740;
+	padding: 20px;
+}
+
+figcaption span{
+	font-weight: 300;
+	color: #b5c0ad;
+}
+
+figure img{
+	display: block;
+	transform: scale(1);
+	transition: all 0.3s ease-in-out;
+	opacity: .8;
+}
+
+figure img:hover{
+	transform: scale(1.1);
+	opacity: 1;
+}
 
 /*.box, .box-1{
 	position: absolute;
@@ -432,11 +500,22 @@ h3{
 
 .contact{
 	text-align: center;
-	background-color: #b5c0ad;
+	background-color: #346268;
 }
 
+.contact h3{
+	font-size: 80px;
+    margin-bottom: 100px;
+}
+
+.contact p{
+	font-size: 50px;
+	color: #093740;
+	font-weight: 300;
+}
 
 .icon-container{
+	margin-top: 50px;
 	min-height: 300px;
 	max-width: 300px;
 	text-align: center;
@@ -446,10 +525,10 @@ h3{
 .icon-container i{
 	font-size: 20px;
 	border-radius: 80px;
-	background-color: #346268;
+	background-color: #093740;
 	height: 40px;
 	width: 40px;
-	color: #b5c0ad;
+	color: #346268;
 	line-height: 40px;
 	-webkit-transition: all 200ms ease-in;
     -webkit-transform: scale(1); 
@@ -458,7 +537,7 @@ h3{
     -moz-transition: all 200ms ease-in;
     -moz-transform: scale(1);
     transition: all 200ms ease-in;
-    transform: scale(1);   
+    transform: scale(1);  
 }
 
 .icon-container i:hover{
@@ -472,9 +551,36 @@ h3{
     transform: scale(1.2);
 }
 
+.icon-container a{
+	text-decoration: none !important;
+}
+
 footer{
-	max-width: 300px;
+	width: 100%;
 	font-weight: bold;
+	position: absolute;
+	background-color: #b5c0ad;
+	bottom: 0;
+	display: flex;
+}
+
+footer .left{
+	padding: 10px;
+	text-align: left;
+	width: 50%;
+}
+
+footer .right{
+	padding: 10px;
+	line-height: 50px;
+	text-align: right;
+	width: 50%;
+	color: #333;
+}
+
+.copy i{
+	font-size: 20px;
+	margin: 5px;
 }
 
 #fp-nav ul li a span, .fp-slidesNav ul li a span{
