@@ -43,10 +43,6 @@ header{
 	left: 0;
 }
 
-/*.start-element h1{
-
-}
-*/
 .wrapper h1{
 	padding-top: 200px;
 	font-size: 100px;
@@ -227,14 +223,14 @@ h3{
 /* menu */
 
 .sticky-menu{
-	position: absolute;
+	position: fixed;
 	top: 30px;
 	right: 30px;
 	z-index: 9999;
 }
 
 .menu{
-	position: absolute;
+	position: fixed;
 	top: 0;
 	right: -220px;
 	padding-top: 40px;
@@ -268,7 +264,7 @@ h3{
 
 @media screen and (max-width: 600px){
 	.menu{
-		position: absolute;
+		position: fixed;
 		top: 0;
 		right: 0;
 		padding-top: 0;
@@ -289,10 +285,13 @@ h3{
 		margin: 10px 10px 10px 10px;
 	}
 	.sticky-menu{
-		top: 10px;
+		top: 0;
+		padding: 10px 0 10px 0;
 		left: 50%;
 		-webkit-transform: translateX(-50%);
-		transform: translateX(-50%)
+		transform: translateX(-50%);
+		width: 100%;
+		background-color: rgba(51, 51, 51, 0.9);
 	}
 	.show{
 		display: block;
@@ -366,15 +365,6 @@ h3{
 	transform: rotate(-135deg);
 }
 
-.menu > .logo span{
-	color: #fff3;
-}
-
-.menu > .logo{
-	position: absolute;
-	bottom: 30px;
-}
-
 /* main */
 
 .main{
@@ -387,44 +377,49 @@ h3{
     margin-bottom: 100px;
 }
 
-.main img{
-	max-width: 400px;
-}
-
 .container{
 	margin: 0 auto;
-	max-width: 1000px;
+	width: 1000px;
 	display: flex;
 }
 
+.box-1, .box-2{
+	padding: 10px;
+}
+
 .box-1{
+	text-align: left;
 	flex: 1;
 	order: 1;
-	text-align: left;
 }
 
 .box-2{
-	flex: 2;
-	order: 2;
 	text-align: right;
+	flex: 1;
+	order: 2;
 }
 
 .main h4{
 	font-weight: 400;
 }
 
-.box-1 h4{
+.box-1 h4, .box-2 h4{
 	color: #b5c0ad;
 	font-size: 30px;
 	background-color: #346268;
 	padding: 40px 40px;
+	position: absolute;
+	z-index: 999;
+}
+
+.box-1 h4{
+	top: 0;
+	right: 200px;
 }
 
 .box-2 h4{
-	color: #b5c0ad;
-	font-size: 30px;
-	background-color: #346268;
-	padding: 40px 40px;
+	top: 0;
+	left: 200px;
 }
 
 figure{
@@ -432,14 +427,25 @@ figure{
 	transform: translateX(20px);
 	transition: all 0.3s ease-in-out;
 	overflow: hidden;
-	width: 150px;
-	height: 250px;
+	width: 580px;
+	height: 280px;
+	cursor: pointer;
 }
 
-figcaption{
+.box-1 figcaption{
 	text-align: left;
 	background-color: #093740;
 	padding: 20px;
+	position: absolute;
+	bottom: 10px;
+}
+
+.box-2 figcaption{
+	text-align: left;
+	background-color: #093740;
+	padding: 20px;
+	position: absolute;
+	bottom: 10px;
 }
 
 figcaption span{
@@ -451,12 +457,23 @@ figure img{
 	display: block;
 	transform: scale(1);
 	transition: all 0.3s ease-in-out;
-	opacity: .8;
+	opacity: .9;
 }
 
 figure img:hover{
 	transform: scale(1.1);
 	opacity: 1;
+}
+
+@media (max-width: 1200px) {
+	.container{
+		margin: 0 auto;
+		max-width: 1000px;
+		display: block;
+	}
+	.fullpage{
+		overflow: hidden;
+	}
 }
 
 /*.box, .box-1{
@@ -476,9 +493,6 @@ figure img:hover{
 	-webkit-transition: all 1.1s ease-out;
 }*/
 
-.container img{
-	max-width: 100%;
-}
 
 /*.fp-viewing-main .box{
 	left: 100px;
