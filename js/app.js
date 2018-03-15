@@ -11,7 +11,7 @@ $( document ).ready(function() {
     $('.sticky-menu #nav-icon1').click(function(){
 		$(this).toggleClass('open');
 
-			$( ".menu" ).toggleClass( "show" );
+			$( ".menu" ).toggleClass('show');
 
 	});
 
@@ -19,6 +19,23 @@ $( document ).ready(function() {
 
 			$(this).fadeOut(3000);
 
+	});
+
+	$('.box-1').hover(function(){
+
+			$('.box-1 img').toggleClass('anim');
+			$('.box-1 figcaption').stop().slideToggle('slow');
+			$('.box-1 .label').stop().fadeToggle(500);
+			$('.left-text').toggleClass('anim-1');
+
+	});
+
+	$('.box-2').hover(function(){
+
+			$('.box-2 img').toggleClass('anim');
+			$('.box-2 figcaption').stop().slideToggle('slow');
+			$('.box-2 .label').stop().fadeToggle(500);
+			$('.right-text').toggleClass('anim-2');
 	});
 
 });

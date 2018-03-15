@@ -24,12 +24,12 @@ header{
 
 .logo{
 	border-radius: 50%;
-	border: 2px solid #333;
+	border: 2px solid #f7c56c;
 	line-height: 50px;
 	font-weight: bold;
 	font-size: 30px;
 	font-family: 'Rozha One', serif;
-	color: #333;
+	color: #f7c56c;
 	padding: 2px;
 }
 
@@ -43,7 +43,7 @@ header{
 	left: 0;
 }
 
-.wrapper h1{
+h1{
 	padding-top: 200px;
 	font-size: 100px;
 	font-weight: 300;
@@ -61,7 +61,8 @@ h2{
 }
 
 h3{
-	font-size: 50px;
+	font-size: 90px;
+	margin-bottom: 100px;
 }
 
 .wrapper{
@@ -119,13 +120,13 @@ h3{
 .wrapper i{
 	color: #b5c0ad; 
 	font-size: 45px;
-	position: absolute;
+	position: fixed;
 	z-index: 999;
 	cursor: pointer;
 	left: 50%;
 	-webkit-transform: translateX(-50%);
 	transform: translateX(-50%);
-	top: 850px;
+	bottom: 10px;
 }
 
 .element-animation{
@@ -235,7 +236,7 @@ h3{
 	right: -220px;
 	padding-top: 40px;
 	height: 100%;
-	background-color: #000;
+	background-color: rgba(181, 192, 173, 0.8);
 	transition: .5s;
 }
 
@@ -270,7 +271,7 @@ h3{
 		padding-top: 0;
 		width: 100%;
 		height: auto;
-		background-color: #000;
+		background-color: rgba(181, 192, 173, 0.8);
 		transition: .5s;
 		display: none;
 		z-index: 3;
@@ -291,7 +292,7 @@ h3{
 		-webkit-transform: translateX(-50%);
 		transform: translateX(-50%);
 		width: 100%;
-		background-color: rgba(51, 51, 51, 0.9);
+		background-color:rgba(181, 192, 173, 0.8);
 	}
 	.show{
 		display: block;
@@ -368,23 +369,13 @@ h3{
 /* main */
 
 .main{
-	background-color: #b5c0ad;
+	background-color: #093740;
 	text-align: center;
 }
 
-.main h3{
-	font-size: 80px;
-    margin-bottom: 100px;
-}
-
 .container{
-	margin: 0 auto;
-	width: 1000px;
 	display: flex;
-}
-
-.box-1, .box-2{
-	padding: 10px;
+	position: relative;
 }
 
 .box-1{
@@ -399,29 +390,37 @@ h3{
 	order: 2;
 }
 
-.main h4{
-	font-weight: 400;
-}
-
-.box-1 h4, .box-2 h4{
-	color: #b5c0ad;
+h4{
 	font-size: 30px;
-	background-color: #346268;
 	padding: 40px 40px;
 	position: absolute;
 	z-index: 999;
+	font-weight: 300;
 }
 
-.box-1 h4{
-	top: 0;
-	right: 200px;
+.left-text{
+	top: -20px;
+	left: 100px;
+	color: #093740;
+	background-color: #346268;
+	transition: .7s;
 }
 
-.box-2 h4{
-	top: 0;
-	left: 200px;
+.right-text{
+	top: -60px;
+	right: 130px;
+	color: #093740;
+	background-color: #b5c0ad;
+	transition: .7s;
 }
 
+.anim-1{
+	top: -60px;
+}
+
+.anim-2{
+	right: 100px;
+}
 figure{
 	position: relative;
 	transform: translateX(20px);
@@ -434,46 +433,57 @@ figure{
 
 .box-1 figcaption{
 	text-align: left;
-	background-color: #093740;
+	background-color: #b5c0ad;
 	padding: 20px;
 	position: absolute;
-	bottom: 10px;
+	bottom: 0px;
+	color: #093740;
 }
 
 .box-2 figcaption{
 	text-align: left;
-	background-color: #093740;
+	background-color: #346268;
 	padding: 20px;
 	position: absolute;
-	bottom: 10px;
+	bottom: 0px;
+	color: #b5c0ad;
 }
 
 figcaption span{
 	font-weight: 300;
-	color: #b5c0ad;
 }
 
 figure img{
 	display: block;
 	transform: scale(1);
 	transition: all 0.3s ease-in-out;
-	opacity: .9;
+	opacity: .8;
+	width: 580px;
+	height: 280px;
+	overflow: hidden;
+	z-index: 2;
 }
 
-figure img:hover{
+.anim{
 	transform: scale(1.1);
 	opacity: 1;
 }
 
-@media (max-width: 1200px) {
-	.container{
-		margin: 0 auto;
-		max-width: 1000px;
-		display: block;
-	}
-	.fullpage{
-		overflow: hidden;
-	}
+.label{
+	position: absolute;
+	top: 40px;
+	left: 50%;
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	background-color: #f7c56c;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 10px 60px;
+    color: #093740;
+    font-weight: 300;
+    display: none;
+    font-size: 20px;
 }
 
 /*.box, .box-1{
@@ -515,11 +525,6 @@ figure img:hover{
 .contact{
 	text-align: center;
 	background-color: #346268;
-}
-
-.contact h3{
-	font-size: 80px;
-    margin-bottom: 100px;
 }
 
 .contact p{
@@ -573,23 +578,27 @@ footer{
 	width: 100%;
 	font-weight: bold;
 	position: absolute;
-	background-color: #b5c0ad;
+	background-color: #093740;
 	bottom: 0;
 	display: flex;
 }
 
-footer .left{
+.foot-left{
 	padding: 10px;
 	text-align: left;
 	width: 50%;
 }
 
-footer .right{
+.foot-right{
 	padding: 10px;
 	line-height: 50px;
 	text-align: right;
 	width: 50%;
 	color: #333;
+}
+
+.copy{
+	color: #346268;
 }
 
 .copy i{
@@ -599,4 +608,90 @@ footer .right{
 
 #fp-nav ul li a span, .fp-slidesNav ul li a span{
 	background-color: #f7c56c !important;
+}
+
+@media (max-width: 1200px) {
+	.container{
+		margin: 0 auto;
+		max-width: 1000px;
+		display: block;
+	}
+	.fullpage{
+		overflow: hidden;
+	}
+	h3{
+		margin-top: 100px;
+	}
+	h4{
+		position: static;
+	}
+	.left-text{
+		top: 0;
+		right: 0;
+	}
+	.right-text{
+		top: 0;
+		right: 0;
+	}
+	.anim-1{
+		margin-top: -10px;
+	}
+	.anim-2{
+		margin-top: -10px;
+	}
+	h1{
+		padding-top: 60px;
+		font-size: 60px;
+		font-weight: 300;
+		position: static;
+		z-index: 2;
+		left: 20%;
+	    margin-left: 0;
+	}
+	h2{
+		font-size: 40px;
+		top: 350px;
+	    width: 300px;
+	    left: 100px;
+	}
+	h3{
+		font-size: 30px;
+		margin-bottom: 100px;
+	}
+	.wrapper{
+		max-width: 1000px;
+		position: relative;
+		text-align: center;
+	}
+	.wrapper span, .wrapper p, .wrapper h2{
+		color: #b5c0ad;
+		z-index: 2;
+		position: static;
+	}
+
+	.wrapper p{
+		font-size: 16px; 
+	    max-width: 300px;
+	    line-height: 28px;
+	    z-index: 2;
+	}
+	.box{
+		display: none;
+	}
+
+	.btns{
+		margin-top: 50px;
+		max-width: 200px;
+		height: 30px;
+		font-size: 14px;
+		display: block;
+	    position: static;
+	    padding: 10px 10px;
+	    line-height: 30px;
+	}
+
+	.btns:hover{
+		background-color: #f7c56c;
+		color: #093740;
+	}
 }
