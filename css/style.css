@@ -848,7 +848,7 @@ footer::after {
 		font-size: 30px;
 	}
 	.icon-container{
-		min-height: 150px;
+		min-height: 200px;
 	}
 	footer{
 		display: block;
