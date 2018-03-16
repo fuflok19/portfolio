@@ -24,7 +24,7 @@ $( document ).ready(function() {
 
 	setTimeout(function(){
 		$('.start-element').fadeOut(3000);
-	}, 3000);
+	}, 1000);
 
 	$('.box-1').hover(function(){
 
