@@ -4,7 +4,8 @@ $( document ).ready(function() {
     	navigation: true,
     	navigationPosition: 'left',
     	responsiveWidth: 1200,
-    	fixedElements: '.sticky-menu, .menu, .show'
+    	fixedElements: '.sticky-menu, .menu, .show',
+    	verticalCentered: true
     });
 
 
@@ -15,11 +16,15 @@ $( document ).ready(function() {
 
 	});
 
-	$('.start-element').hover(function(){
+	// $('.start-element').hover(function(){
 
-			$(this).fadeOut(3000);
+	// 		$(this).fadeOut(3000);
 
-	});
+	// });
+
+	setTimeout(function(){
+		$('.start-element').fadeOut(3000);
+	}, 3000);
 
 	$('.box-1').hover(function(){
 
